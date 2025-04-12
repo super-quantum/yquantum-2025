@@ -60,7 +60,6 @@ def qhash(x: bytes) -> bytes:
     # create a dictionary mapping each parameter to its value.
     param_values = {}
     for i in range(num_params):
-        # extract a nibble (4 bits) from the hash
         nibble = (x[i // 2] >> (4 * (1 - (i % 2)))) & 0x0F
         # scale it to use as a rotation angle parameter
         value = nibble * math.pi / 8
