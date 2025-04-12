@@ -65,3 +65,14 @@ def qhash(x: bytes) -> bytes:
             data.append((fixed >> (8 * i)) & 0xFF)
 
     return bytes(data)
+
+
+# #This lacks the full blockchain-specific classical hashign, and restricts the input to a fixed size (256-bits).
+
+# #it is not eligible for a challenge solution in its current form. A proper Qubitcoin implementation would need:
+
+# Post-simulation classical hashing for additional security,
+
+# The ability to handle variable input sizes, and
+
+# A more robust approach to ensuring that the hash result can be used securely in the blockchain’s Proof of Work or Proof of Stake systems.
